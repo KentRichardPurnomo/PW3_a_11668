@@ -18,7 +18,7 @@ if (isset($_POST["mencoba_login"])) {
         header("Location: ./login.php");
         exit;
     }
-    if (!isset($_FILES["bukti_ngantor"])) {
+    if (isset($_FILES["bukti_ngantor"])) {
         $_SESSION["error"] = "Bukti sedang ngantor harus diisi!";
         header("Location: ./login.php");
         exit;
